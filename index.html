@@ -1,1 +1,277 @@
-CoRL 2024: in submission
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Config/92.2.2710.20';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll','0':{'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenEQA: Embodied Question Answering in the Era of Foundation Models</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">DKPROMPT: Domain Knowledge Prompting
+                            Vision-Language Models for Open-World Planning</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="">Anonymous Author(s)</a><sup>*</sup>,
+                            </span>
+                            <!-- <span class="author-block">
+                                <a href="https://keke-220.github.io/">Xiaohan Zhang</a><sup>*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://yonatanbisk.com/">Yonatan Bisk</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://faculty.cc.gatech.edu/~dbatra/">Dhruv Batra</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.cs.binghamton.edu/~szhang/">Shiqi Zhang</a>,
+                            </span> -->
+                        </div>
+<!--
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">Work done at Fundamental AI Research (FAIR), Meta.</span>
+                            <span class="author-block"><sup>*</sup>Equal Contributions</span>
+                        </div> -->
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a target="_blank" href="assets/pdfs/submission.pdf"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                    <!-- <a target="_blank" href="https://example.com"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-blog"></i>
+                                        </span>
+                                        <span>Blog</span>
+                                    </a> -->
+                                    <a target="_blank" href="https://example.com"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                    <!-- <a target="_blank" href="https://github.com/facebookresearch/open-eqa"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-robot"></i>
+                                        </span>
+                                        <span>Benchmark</span>
+                                    </a> -->
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-widescreen">
+            <div class="column content">
+                <video poster="" autoplay muted loop height="100%" width="100%">
+                    <source src="assets/images/figure_teaser.pdf" type="video/mp4">
+                </video>
+            </div>
+            <h2 class="subtitle has-text-centered">
+                Figure 1 or gif of the framework
+            </h2>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 110%">
+                            Vision-language models (VLMs) have been applied to robot task planning problems, where the robot receives a task in natural language and generates plans based on visual inputs. While current VLMs have demonstrated strong vision-language understanding capabilities, their performance is still far from being satisfactory in planning tasks. At the same time, although classical task planners, such as PDDL-based, are strong in planning for long-horizon tasks, they do not work well in open worlds where unforeseen situations are common. In this paper, we propose a novel task planning and execution framework, called DKPROMPT, which automates VLM prompting using domain knowledge in PDDL for classical planning in open worlds.
+                            Results from quantitative experiments show that DKPROMPT outperforms classical planning, pure VLM-based and a few other competitive baselines in task completion rate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered">
+                <div class="column">
+                    <h2 class="title is-3"> An overview of DKPROMPT. </h2>
+                    <div class="columns is-centered">
+                        <div class="column content">
+
+                            <img src="assets/images/dkprompt_overview.pdf" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto" width="80%">
+                            <span style="font-size: 110%">
+                                <span style="font-weight: bold">
+                                    <br />
+                                    An overview of DKPROMPT. By simply querying the robot's current observation against the domain knowledge~(i.e., action preconditions and effects) as VQA tasks, DKPROMPT can call the classical planner to generate a new valid plan using updated world states. Note that DKPROMPT only queries about predicates. The left shows how DKPROMPT checks every precondition of the action to be executed next, and the right shows how it verifies the expected action effects are all in place after action execution. Replanning is triggered when preconditions or effects are unsatisfied after updating the planner's action knowledge.
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvc1">Everyday Tasks in OmniGibson Simulator</span></h2>
+                        <img src="assets/images/Baselines_accuracy.pdf" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" width="100%">
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">
+                                <br />
+                                Quantitative evaluation results are collected in the OmniGibson simulator. The agent is equipped with a set of skills, and aims to use its skills to interact with the environment, completing long-horizon tasks autonomously.
+                                <!-- Itemize -->
+                                <li> <b>Store firewood:</b> aaa </li>
+                                <li> <b>Cook a frozen pie:</b> aaa </li>
+                                <li> <b>Boil water in the microwave:</b> aaa </li>
+                                <li> <b>Halve an egg:</b> aaa </li>
+                                <li> <b>Bring in empty bottle:</b> aaa </li>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvc1">DKPROMPT v.s. Baselines in Success Rate over Five Everyday Tasks </span></h2>
+                        <img src="assets/images/Baselines_accuracy.pdf" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" width="100%">
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">
+                                <br />
+                                DKPROMPT v.s. Baselines in Success Rate over Five Everyday Tasks. </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered">
+
+                <div class="column">
+                    <h2 class="title is-3">Everyday Tasks in OmniGibson Simulator</h2>
+                    <div class="columns is-centered">
+                        <div class="column content">
+
+                            <img src="assets/images/workflow.png" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto" width="100%">
+                            <span style="font-size: 110%">
+                                <span style="font-weight: bold">
+                                    <br />
+                                    <br />
+
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="title is-3">Performance by Category</h2>
+                    <div class="columns is-centered">
+                        <div class="column content">
+
+                            <img src="assets/images/spider-plot.svg" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto" width="75%">
+                            <span style="font-size: 110%">
+                                <span style="font-weight: bold">
+                                    <br />
+                                    Category-level performance on EM-EQA. </span>
+                                We find that agents with access to visual information excel at localizing and
+                                recognizing objects and attributes, and make better use of this information to answer
+                                questions that require world knowledge. However, on other categories performance is
+                                closer to the blind LLM baseline (GPT-4), indicating
+                                substantial room for improvement on OpenEQA.
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>
+    @inproceedings{OpenEQA2023,
+        title         = {OpenEQA: Embodied Question Answering in the Era of Foundation Models},
+        booktitle     = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+        author        = {Majumdar, Arjun and Ajay, Anurag and Zhang, Xiaohan and Putta, Pranav and Yenamandra, Sriram and Henaff, Mikael and Silwal, Sneha and Mcvay, Paul and Maksymets, Oleksandr and Arnaud, Sergio and Yadav, Karmesh and Li, Qiyang and Newman, Ben and Sharma, Mohit and Berges, Vincent and Zhang, Shiqi and Agrawal, Pulkit and Bisk, Yonatan and Batra, Dhruv and Kalakrishnan, Mrinal and Meier, Franziska and Paxton, Chris and Sax, Sasha and Rajeswaran, Aravind},
+        year          = {2024},
+    }
+        </code></pre>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="content has-text-centered">
+                        <p>
+                            Website template borrowed from <a href="https://open-eqa.github.io/">OpenEQA</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
