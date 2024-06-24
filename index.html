@@ -187,7 +187,10 @@
                             style="display: block; margin-left: auto; margin-right: auto" width="100%">
                             <span style="font-size: 110%">
                                 <br />
-                                DKPROMPT v.s. Baselines in Success Rate over Five Everyday Tasks.
+                                DKPROMPT consistently outperforms baselines in task completion rates.
+                                By incorporating domain knowledge (i.e., action preconditions and effects) for prompting,
+                                DKPROMPT gains a greater positive impact on task completion from action failure recovery
+                                compared to other baselines.
                             </span>
                         </span>
                     </div>
@@ -196,29 +199,35 @@
         </div>
     </section>
 
-    <!-- <section class="section">
+    <section class="section">
         <div class="container is-max-widescreen">
             <div class="columns is-centered">
 
                 <div class="column">
-                    <h2 class="title is-3">Everyday Tasks in OmniGibson Simulator</h2>
+                    <h2 class="title is-3">Ablation study on preconditions and effects</h2>
                     <div class="columns is-centered">
                         <div class="column content">
 
-                            <img src="assets/images/workflow.png" class="interpolation-image" alt=""
+                            <img src="assets/images/ablation_study1.png" class="interpolation-image" alt=""
                                 style="display: block; margin-left: auto; margin-right: auto" width="100%">
                             <span style="font-size: 110%">
                                 <span style="font-weight: bold">
                                     <br />
-                                    <br />
-
-                            </span>
+                                    Impact of preconditions and effects on task completion.
+                                </span>
+                                DKPROMPT achieves an average success rate of 66.5%.
+                                For <span style="font-style: italic;" >Eff.-only</span> that considers only action effects,
+                                the average success rate drops to 53.0%, and
+                                for <span style="font-style: italic;">Pre.-only</span> that considers only preconditions,
+                                it further decreases to 41.5%.
+                                This suggests that the integration of both effects and preconditions in DKPROMPT significantly
+                                enhances task performance compared to considering these components separately.
                         </div>
 
                     </div>
                 </div>
                 <div class="column">
-                    <h2 class="title is-3">Performance by Category</h2>
+                    <h2 class="title is-3">Performance of Other VLMs</h2>
                     <div class="columns is-centered">
                         <div class="column content">
 
@@ -227,20 +236,18 @@
                             <span style="font-size: 110%">
                                 <span style="font-weight: bold">
                                     <br />
-                                    Category-level performance on EM-EQA. </span>
-                                We find that agents with access to visual information excel at localizing and
-                                recognizing objects and attributes, and make better use of this information to answer
-                                questions that require world knowledge. However, on other categories performance is
-                                closer to the blind LLM baseline (GPT-4), indicating
-                                substantial room for improvement on OpenEQA.
+                                    Performance comparison of DKPROMPT with other VLMs.
+                                </span>
+                                We also run experiments on various VLMs, including GPT-4 (as being used in the original
+                                implementation of DKPROMPT) from OpenAI, Gemini 1.5 from Google, and Claude 3 from Anthropic.
+                                According to the figure, GPT-4 consistently performs better than Gemini and Claude.
                             </span>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
